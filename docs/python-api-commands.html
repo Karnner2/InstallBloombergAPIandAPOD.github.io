@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Python API Commands | Installing Bloomberg APOD and API</title>
+  <meta name="description" content="This manual provides instructions to assist the user in installing Bloomberg Anywhere through the APOD feature. The APOD can be used to access the BLP API and the Excel API. Both of these services can be used to download significant amounts of data from the Bloomberg Professional Service." />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Python API Commands | Installing Bloomberg APOD and API" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This manual provides instructions to assist the user in installing Bloomberg Anywhere through the APOD feature. The APOD can be used to access the BLP API and the Excel API. Both of these services can be used to download significant amounts of data from the Bloomberg Professional Service." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Python API Commands | Installing Bloomberg APOD and API" />
+  
+  <meta name="twitter:description" content="This manual provides instructions to assist the user in installing Bloomberg Anywhere through the APOD feature. The APOD can be used to access the BLP API and the Excel API. Both of these services can be used to download significant amounts of data from the Bloomberg Professional Service." />
+  
+
+<meta name="author" content="Dr. Fluharty-Jaidee" />
+
+
+<meta name="date" content="2020-05-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="installing-the-python-api.html"/>
+<link rel="next" href="references.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Installing Bloomberg APOD</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Forward</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#purpose"><i class="fa fa-check"></i><b>1.1</b> Purpose</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#bloomberg-user-agreement"><i class="fa fa-check"></i><b>1.2</b> Bloomberg User Agreement</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Install.html"><a href="Install.html"><i class="fa fa-check"></i><b>2</b> Installing Bloomberg and API</a><ul>
+<li class="chapter" data-level="2.1" data-path="Install.html"><a href="Install.html#getting-started"><i class="fa fa-check"></i><b>2.1</b> Getting Started</a></li>
+<li class="chapter" data-level="2.2" data-path="Install.html"><a href="Install.html#the-bloomberg-terminal"><i class="fa fa-check"></i><b>2.2</b> The Bloomberg Terminal</a></li>
+<li class="chapter" data-level="2.3" data-path="Install.html"><a href="Install.html#log-in-and-test"><i class="fa fa-check"></i><b>2.3</b> Log-In And Test</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="installing-the-python-api.html"><a href="installing-the-python-api.html"><i class="fa fa-check"></i><b>3</b> Installing the Python API</a><ul>
+<li class="chapter" data-level="3.1" data-path="installing-the-python-api.html"><a href="installing-the-python-api.html#requirements"><i class="fa fa-check"></i><b>3.1</b> Requirements</a></li>
+<li class="chapter" data-level="3.2" data-path="installing-the-python-api.html"><a href="installing-the-python-api.html#downloading-and-unzipping-the-bloomberg-api"><i class="fa fa-check"></i><b>3.2</b> Downloading and Unzipping the Bloomberg API</a></li>
+<li class="chapter" data-level="3.3" data-path="installing-the-python-api.html"><a href="installing-the-python-api.html#setting-up-the-path-link"><i class="fa fa-check"></i><b>3.3</b> Setting-Up The PATH Link</a></li>
+<li class="chapter" data-level="3.4" data-path="installing-the-python-api.html"><a href="installing-the-python-api.html#installing-the-api"><i class="fa fa-check"></i><b>3.4</b> Installing the API</a></li>
+<li class="chapter" data-level="3.5" data-path="installing-the-python-api.html"><a href="installing-the-python-api.html#running-the-api-in-python"><i class="fa fa-check"></i><b>3.5</b> Running the API in Python</a></li>
+<li class="chapter" data-level="3.6" data-path="installing-the-python-api.html"><a href="installing-the-python-api.html#your-first-test-download-chevrons-daily-prices"><i class="fa fa-check"></i><b>3.6</b> Your First Test: Download Chevron’s Daily Prices</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="python-api-commands.html"><a href="python-api-commands.html"><i class="fa fa-check"></i><b>4</b> Python API Commands</a><ul>
+<li class="chapter" data-level="4.1" data-path="python-api-commands.html"><a href="python-api-commands.html#xbbg"><i class="fa fa-check"></i><b>4.1</b> XBBG</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="python-api-commands.html"><a href="python-api-commands.html#a-sample-bdp-command"><i class="fa fa-check"></i><b>4.1.1</b> A sample BDP Command</a></li>
+<li class="chapter" data-level="4.1.2" data-path="python-api-commands.html"><a href="python-api-commands.html#a-sample-bdh-command"><i class="fa fa-check"></i><b>4.1.2</b> A sample BDH Command</a></li>
+<li class="chapter" data-level="4.1.3" data-path="python-api-commands.html"><a href="python-api-commands.html#a-sample-bds-command"><i class="fa fa-check"></i><b>4.1.3</b> A Sample BDS Command</a></li>
+<li class="chapter" data-level="4.1.4" data-path="python-api-commands.html"><a href="python-api-commands.html#a-sample-bdib-command"><i class="fa fa-check"></i><b>4.1.4</b> A sample BDIB Command</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="python-api-commands.html"><a href="python-api-commands.html#extracting-data-out-of-python"><i class="fa fa-check"></i><b>4.2</b> Extracting Data Out of Python</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Installing Bloomberg APOD and API</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="python-api-commands" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Python API Commands</h1>
+<p>Multiple Python API Clients connect to Bloomberg. There is the direct and strict BLP. <strong>BLP</strong> will return responses to you in a regular JSON style API response. You would need to know how to parse the JSON or use JSON or JSONLight to extract the information you are looking for.</p>
+<p><strong>pdblp</strong> and <strong>xbbg</strong> are wrappers for the BLP. These will provide pandas data frames ready for you to export to csv or excel or analyze directly in Python or other statistical analytics software.</p>
+<p>I suggest you make use of <strong>pdblp</strong> or <strong>xbbg</strong>, reserve the use of BLP when the pdblp or xbbg do not provide you the functionality you require. For example, both pdblp and xbbg packages have limited field search capabilities while //blp/searchFieldRequest allows you to programmatically search fields similar to how you would with the FLDS command in the Bloomberg Terminal. For the purpose of this tutorial, I will show the most common commands in the <strong>xbbg</strong> as these produce results similar to those found in excel and it is the most straightforward. I encourage you to review the <strong>pdblp</strong> package on your own as it is very similar but provides some more features.</p>
+<div id="xbbg" class="section level2">
+<h2><span class="header-section-number">4.1</span> XBBG</h2>
+<p>The documentation for the <strong>XBBG</strong> package can be found in its python or anaconda library source on the internet. It also has a <a href="https://xbbg.readthedocs.io/en/latest/">read-the-docs page</a> which I find to be the simplest. Much of the code here is taken from that source.</p>
+<p>There are three main reference commands similar to the commands we run in the Excel API. BDP – data point request, BDH – historical request, and BDS – block requests which return groups of information about the field (not all fields have this capability). Lastly, there is the BDIB request which is for intraday trading information up-to tick level frequency. Be aware that intraday trading information is available through the Excel API for the past 140 trading days and through the Python API for the past 240 trading days (approximately 1 year).</p>
+<div id="a-sample-bdp-command" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> A sample BDP Command</h3>
+<p>The simplest command is the BDP or Bloomberg Data Point; it will return a single point in time of data or a static data point which never changes. Let’s try it out on Spyder.</p>
+<pre><code>blp.bdp(tickers=&#39;CVX US Equity&#39;, flds=[&#39;Security_Name&#39;, &#39;GICS_Sector_Name&#39;])</code></pre>
+</div>
+<div id="a-sample-bdh-command" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> A sample BDH Command</h3>
+<p>The most useful command for finance research will likely be the BDH or Bloomberg Data Historical, which returns you a set of at most daily values for variables which have historical data. We have already done an example of these, but there is another:</p>
+<pre><code>blp.bdh(tickers=&#39;SPX Index&#39;, flds=[&#39;High&#39;, &#39;Low&#39;, &#39;Last_Price&#39;],
+start_date=&#39;2018-10-10&#39;, end_date=&#39;2018-10-20&#39;,
+)</code></pre>
+<p>Please note that while it may seem that data would not be reported under the historical feature because we tend to think of prices and returns in a time series and not much else this is not true. There are some 62,000 firm-level variables that Bloomberg allows access to which have historical data.</p>
+</div>
+<div id="a-sample-bds-command" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> A Sample BDS Command</h3>
+<p>The BDS command can be useful in finding information that Bloomberg reports in a table or on a pre-made screen which you would like programmatic access to. Unfortunately, they are unreliable, and the syntax is complicated and not uniform by field. Since there are so many fields to deal with these are less efficient. The following example provides the history of all dividends paid from Chevron over January to June of 2018.</p>
+<pre><code>blp.bds(&#39;CVX US Equity&#39;, &#39;DVD_Hist_All&#39;, DVD_Start_Dt=&#39;20180101&#39;, DVD_End_Dt=&#39;20180531&#39;)</code></pre>
+</div>
+<div id="a-sample-bdib-command" class="section level3">
+<h3><span class="header-section-number">4.1.4</span> A sample BDIB Command</h3>
+<p>The BDIB command provides intraday prices. You are limited to the historical value of prices you can extract and the amount of values. Generally, Bloomberg will not allow you to extract more than three to four thousand rows of information at a given time so you may need to break this information up to get it to work correctly.</p>
+<pre><code>blp.bdib(ticker=&#39;BHP AU Equity&#39;, dt=&#39;2018-10-17&#39;)</code></pre>
+</div>
+</div>
+<div id="extracting-data-out-of-python" class="section level2">
+<h2><span class="header-section-number">4.2</span> Extracting Data Out of Python</h2>
+<p>I suggest you get familiar with loops, arrays, dataframes (pandas), and the csv package in Python. You can directly export data by writing it to a dataframe and them from the pandas package you can write that dataframe to a csv file in your current working directory. It would be best if you changed your working directory at the start of your Spyder session it will default to a place you typically do not want to place files.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="installing-the-python-api.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-method.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Installing Bloomberg APOD and API</title>
+  <meta name="description" content="This manual provides instructions to assist the user in installing Bloomberg Anywhere through the APOD feature. The APOD can be used to access the BLP API and the Excel API. Both of these services can be used to download significant amounts of data from the Bloomberg Professional Service." />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Installing Bloomberg APOD and API" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This manual provides instructions to assist the user in installing Bloomberg Anywhere through the APOD feature. The APOD can be used to access the BLP API and the Excel API. Both of these services can be used to download significant amounts of data from the Bloomberg Professional Service." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Installing Bloomberg APOD and API" />
+  
+  <meta name="twitter:description" content="This manual provides instructions to assist the user in installing Bloomberg Anywhere through the APOD feature. The APOD can be used to access the BLP API and the Excel API. Both of these services can be used to download significant amounts of data from the Bloomberg Professional Service." />
+  
+
+<meta name="author" content="Dr. Fluharty-Jaidee" />
+
+
+<meta name="date" content="2020-05-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="Install.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Installing Bloomberg APOD</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Forward</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#purpose"><i class="fa fa-check"></i><b>1.1</b> Purpose</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#bloomberg-user-agreement"><i class="fa fa-check"></i><b>1.2</b> Bloomberg User Agreement</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="Install.html"><a href="Install.html"><i class="fa fa-check"></i><b>2</b> Installing Bloomberg and API</a><ul>
+<li class="chapter" data-level="2.1" data-path="Install.html"><a href="Install.html#getting-started"><i class="fa fa-check"></i><b>2.1</b> Getting Started</a></li>
+<li class="chapter" data-level="2.2" data-path="Install.html"><a href="Install.html#the-bloomberg-terminal"><i class="fa fa-check"></i><b>2.2</b> The Bloomberg Terminal</a></li>
+<li class="chapter" data-level="2.3" data-path="Install.html"><a href="Install.html#log-in-and-test"><i class="fa fa-check"></i><b>2.3</b> Log-In And Test</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="installing-the-python-api.html"><a href="installing-the-python-api.html"><i class="fa fa-check"></i><b>3</b> Installing the Python API</a><ul>
+<li class="chapter" data-level="3.1" data-path="installing-the-python-api.html"><a href="installing-the-python-api.html#requirements"><i class="fa fa-check"></i><b>3.1</b> Requirements</a></li>
+<li class="chapter" data-level="3.2" data-path="installing-the-python-api.html"><a href="installing-the-python-api.html#downloading-and-unzipping-the-bloomberg-api"><i class="fa fa-check"></i><b>3.2</b> Downloading and Unzipping the Bloomberg API</a></li>
+<li class="chapter" data-level="3.3" data-path="installing-the-python-api.html"><a href="installing-the-python-api.html#setting-up-the-path-link"><i class="fa fa-check"></i><b>3.3</b> Setting-Up The PATH Link</a></li>
+<li class="chapter" data-level="3.4" data-path="installing-the-python-api.html"><a href="installing-the-python-api.html#installing-the-api"><i class="fa fa-check"></i><b>3.4</b> Installing the API</a></li>
+<li class="chapter" data-level="3.5" data-path="installing-the-python-api.html"><a href="installing-the-python-api.html#running-the-api-in-python"><i class="fa fa-check"></i><b>3.5</b> Running the API in Python</a></li>
+<li class="chapter" data-level="3.6" data-path="installing-the-python-api.html"><a href="installing-the-python-api.html#your-first-test-download-chevrons-daily-prices"><i class="fa fa-check"></i><b>3.6</b> Your First Test: Download Chevron’s Daily Prices</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="python-api-commands.html"><a href="python-api-commands.html"><i class="fa fa-check"></i><b>4</b> Python API Commands</a><ul>
+<li class="chapter" data-level="4.1" data-path="python-api-commands.html"><a href="python-api-commands.html#xbbg"><i class="fa fa-check"></i><b>4.1</b> XBBG</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="python-api-commands.html"><a href="python-api-commands.html#a-sample-bdp-command"><i class="fa fa-check"></i><b>4.1.1</b> A sample BDP Command</a></li>
+<li class="chapter" data-level="4.1.2" data-path="python-api-commands.html"><a href="python-api-commands.html#a-sample-bdh-command"><i class="fa fa-check"></i><b>4.1.2</b> A sample BDH Command</a></li>
+<li class="chapter" data-level="4.1.3" data-path="python-api-commands.html"><a href="python-api-commands.html#a-sample-bds-command"><i class="fa fa-check"></i><b>4.1.3</b> A Sample BDS Command</a></li>
+<li class="chapter" data-level="4.1.4" data-path="python-api-commands.html"><a href="python-api-commands.html#a-sample-bdib-command"><i class="fa fa-check"></i><b>4.1.4</b> A sample BDIB Command</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="python-api-commands.html"><a href="python-api-commands.html#extracting-data-out-of-python"><i class="fa fa-check"></i><b>4.2</b> Extracting Data Out of Python</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Installing Bloomberg APOD and API</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Installing Bloomberg APOD and API</h1>
+<p class="author"><em>Dr. Fluharty-Jaidee</em></p>
+<p class="date"><em>2020-05-21</em></p>
+</div>
+<div id="forward" class="section level1">
+<h1><span class="header-section-number">Chapter 1</span> Forward</h1>
+<div id="purpose" class="section level2">
+<h2><span class="header-section-number">1.1</span> Purpose</h2>
+<p>This manual is intended for use by West Virginia University active research faculty and PhD students. You must have an active Bloomberg account associated with West Virginia University in order to access the Bloomberg license.</p>
+<p>The use of Bloomberg Anywhere is temporarily granted during the COVID-19 closure and is expected to be removed at a future date. The APOD will become unusable once the access is rescinded. Users will still be able to install the Python API and access the data by using the Terminals housed in the Department of Finance at the John Chambers College of Business and Economics.</p>
+</div>
+<div id="bloomberg-user-agreement" class="section level2">
+<h2><span class="header-section-number">1.2</span> Bloomberg User Agreement</h2>
+<p>You are responsible for reviewing the Bloomberg User Agreement. Some important points for you to note:</p>
+<ul>
+<li>There can be only 12 concurrent log-ins because West Virginia University has 12 individual Terminal licenses. If more than 12 users login simultaneously, the 13th user will be informed that she cannot log in until another user disconnects. For this reason, it is good etiquette to log out of Bloomberg when you are finished using it.</li>
+<li>Bloomberg limits the download amounts in each request via the API (either Python or Excel), you may need to chunk your request into components.</li>
+<li>You may not use the Terminal or APOD to obtain information that you trade on. The West Virginia University license does not allow for trades to be placed or made on the information obtained from the terminals.</li>
+<li>The license specifies that data obtained from the service may not be removed from your local drive. You may not obtain data for any individual outside of West Virginia University.</li>
+<li>You may not send data outside of the country without express approval from the Office of Export Control at West Virginia University. This is a matter of federal law. The Directorate of Defense Trade Controls and the Bureau of Industry and Security are responsible for regulating the export of information and research related material. Bloomberg data services is considered controlled technology. Violations range from $50,000 to $1,000,000 in fines and up to 10 years in prison. Questions on this policy can be found at <a href="https://exportcontrol.wvu.edu/">Export Control</a>.</li>
+</ul>
+<p>You can review the entire <a href="http://www.bbhub.io/bnef/sites/4/2012/12/Bloomberg_Finance_L1.P-Standard-S.pdf">Subscription Terms and Conditions</a> on BBhub.io.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="Install.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
